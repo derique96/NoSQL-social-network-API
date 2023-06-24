@@ -2,5 +2,22 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^7.0.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "nosql-social-network-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derique96/NoSQL-social-network-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derique96/NoSQL-social-network-API/issues"
+  },
+  "homepage": "https://github.com/derique96/NoSQL-social-network-API#readme"
 }
