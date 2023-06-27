@@ -12,7 +12,8 @@ const userSchema = new Schema(
             type: String,
             required: true,
             unique: true,
-            match:  [/.+Q.+\..+/, 'Must match an email address!'],
+            validate: [validateEmail, 'Please fill a valid email address'],
+            match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
             _id: [
                 {
                     type: Schema.Types.ObjectId,
@@ -27,10 +28,16 @@ const userSchema = new Schema(
                     ref: 'User',
                 },
             ],
-        },
-        
-
+        }
     },
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
+    },
+
+        
 );
 
 userSchema.virtual('friendCount').get(function(){
