@@ -25,3 +25,6 @@ const reactionSchema = new Schema(
         toJSON: { getters: true, virtuals: true },
     },
 );
+
+
+module.exports = reactionSchema;
